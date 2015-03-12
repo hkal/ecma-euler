@@ -4,7 +4,7 @@
   "description": "Doing them Project Euler problems",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "node test/index.js"
   },
   "keywords": [
     "euler",

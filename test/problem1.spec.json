@@ -1,0 +1,11 @@
+{
+  "name": "Problem 1",
+  "solutionLocation": "../src/problem1.js",
+  "tests": [
+    {
+      "description": "should equal 233168",
+      "args": 1000,
+      "answer": 233168
+    }
+  ]
+}

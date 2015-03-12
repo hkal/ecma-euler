@@ -1,0 +1,19 @@
+{
+  "name": "euler-playground",
+  "version": "0.0.1",
+  "description": "Doing them Project Euler problems",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [
+    "euler",
+    "algorithms",
+    "practice"
+  ],
+  "author": "hkal",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  }
+}

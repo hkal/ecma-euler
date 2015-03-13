@@ -12,7 +12,6 @@ var mocha = new Mocha();
 function setupTest(file) {
     var testConfig = require(path.resolve(__dirname, file));
     var skipSuite = false;
-    var solution;
 
     try {
         var solution = require(testConfig.solutionLocation);

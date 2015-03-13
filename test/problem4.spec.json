@@ -1,0 +1,10 @@
+{
+  "name": "Problem 4",
+  "solutionLocation": "../src/problem4.js",
+  "tests": [
+    {
+      "description": "should equal 906609",
+      "answer": 906609
+    }
+  ]
+}

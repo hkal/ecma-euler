@@ -11,12 +11,27 @@ var mocha = new Mocha();
 
 function setupTest(file) {
     var testConfig = require(path.resolve(__dirname, file));
-    var solution = require(testConfig.solutionLocation);
+    var skipSuite = false;
+    var solution;
+
+    try {
+        var solution = require(testConfig.solutionLocation);
+    } catch(e) {
+        if (e.code === 'MODULE_NOT_FOUND') {
+            skipSuite = true;
+        } else {
+            throw e;
+        }
+    }
 
     var suite = Suite.create(mocha.suite, testConfig.name);
 
     testConfig.tests.map(function(test) {
         return new Test(test.description, function() {
+            if (skipSuite) {
+                this.skip();
+            }
+
             assert.equal(solution(test.args), test.answer);
         });
     })
